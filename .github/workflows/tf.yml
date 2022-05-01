@@ -2,7 +2,7 @@ name: Terraform
 on: #[push]
   workflow_run:
     workflows: ["App"]
-    branches: [main]
+    branches: [master]
     types:
       - completed
 jobs:
