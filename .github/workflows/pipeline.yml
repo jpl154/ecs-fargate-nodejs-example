@@ -42,9 +42,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Run infracost diff
-        uses: infracost/infracost-gh-action@master
-        env:
-          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: infracost/actions/setup@v1
         with:
-          path: ./
+          api-key: ${{ secrets.INFRACOST_API_KEY }}
+      - name: Generate Infracost JSON
+        run: infracost breakdown --path plan.json --format json --out-file /tmp/infracost.json
+        working-directory: ./
