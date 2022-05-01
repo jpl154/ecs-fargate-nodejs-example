@@ -1,5 +1,10 @@
 name: Terraform
 on: [push]
+  # workflow_run:
+  #   workflows: ["App"]
+  #   branches: [main]
+  #   types:
+  #     - completed
 jobs:
   check-format:
     runs-on: ubuntu-latest
