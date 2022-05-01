@@ -30,3 +30,28 @@ variable "region" {
     error_message = "Must be valid AWS Region names."
   }
 }
+
+variable "image" {
+  type = string
+  default = "jpl4k/nginx-calculator:master"
+}
+
+variable "container_port" {
+  type = string
+  default = "3000"
+}
+
+variable "container_cpu" {
+  type = number
+  default = 1024
+}
+
+variable "container_mem" {
+  type = number
+  default = 2048
+}
+
+variable "app_name" {
+  type = string
+  default = "calculator"
+}
