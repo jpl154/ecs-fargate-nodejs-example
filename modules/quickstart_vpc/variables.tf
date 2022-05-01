@@ -35,7 +35,7 @@ variable "instance_tenancy" {
 
 variable "cidr" {
   description = "The CIDR block for the VPC. Default value is a valid CIDR, but not acceptable by AWS and should be overridden"
-  type        = string 
+  type        = string
   default     = "10.0.0.0/16"
 }
 
@@ -54,7 +54,7 @@ variable "private_subnets_A" {
 variable "private_subnets_B" {
   description = "A list of private subnets inside the VPC"
   type        = list(string)
-  default     = ["10.0.192.0/21", "10.0.200.0/21", "10.0.208.0/21", "10.0.216.0/21","10.0.224.0/22", "10.0.228.0/22"]
+  default     = ["10.0.192.0/21", "10.0.200.0/21", "10.0.208.0/21", "10.0.216.0/21", "10.0.224.0/22", "10.0.228.0/22"]
 }
 
 variable "public_inbound_acl_rules" {
@@ -122,20 +122,20 @@ variable "custom_outbound_acl_rules" {
 }
 
 variable "owner" {
-    type = string
-    default = "Joseph LaCava"
-    description = "Owner of the deployed resources"
+  type        = string
+  default     = "Joseph LaCava"
+  description = "Owner of the deployed resources"
 }
 
 variable "optional_tags" {
-    type = map(string)
-    default = {
-        business_unit = "demo"
-    }
+  type = map(string)
+  default = {
+    business_unit = "demo"
+  }
 }
 
 variable "environment" {
-    type = string
-    default = "dev"
-    description = "Workspace environment"
+  type        = string
+  default     = "dev"
+  description = "Workspace environment"
 }
