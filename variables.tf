@@ -1,28 +1,28 @@
 variable "environment" {
-    type = string
-    default = "dev"
+  type    = string
+  default = "dev"
 
-    validation {
-        condition = contains(["dev","qa","stage","prod"], var.environment)
-        error_message = "Invalid value given. Allowed Values:[\"dev\",\"qa\",\"stage\",\"prod\"]."
-    }
+  validation {
+    condition     = contains(["dev", "qa", "stage", "prod"], var.environment)
+    error_message = "Invalid value given. Allowed Values:[\"dev\",\"qa\",\"stage\",\"prod\"]."
+  }
 }
 
 variable "owner" {
-    type = string
-    default = "Joseph LaCava"
+  type    = string
+  default = "Joseph LaCava"
 }
 
 # Not adding validation due to complex type.
 variable "optional_tags" {
-    type = map(string)
-    default = {
-        business_unit = "demo"
-    }
+  type = map(string)
+  default = {
+    business_unit = "demo"
+  }
 }
 
 variable "region" {
-  type = string
+  type    = string
   default = "us-east-1"
 
   validation {

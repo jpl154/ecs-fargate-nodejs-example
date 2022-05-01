@@ -1,13 +1,13 @@
-terraform { 
-    required_version = ">= 1.1.0"
+terraform {
+  required_version = ">= 1.1.0"
 
-#     cloud {
-#         organization = "jlac154-demo"
+  #     cloud {
+  #         organization = "jlac154-demo"
 
-#         workspaces {
-#             tags = ["demo"]
-#         }
-#     }
+  #         workspaces {
+  #             tags = ["demo"]
+  #         }
+  #     }
 }
 
 
