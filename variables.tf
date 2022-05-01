@@ -32,26 +32,26 @@ variable "region" {
 }
 
 variable "image" {
-  type = string
+  type    = string
   default = "jpl4k/nginx-calculator:master"
 }
 
 variable "container_port" {
-  type = string
+  type    = string
   default = "3000"
 }
 
 variable "container_cpu" {
-  type = number
+  type    = number
   default = 1024
 }
 
 variable "container_mem" {
-  type = number
+  type    = number
   default = 2048
 }
 
 variable "app_name" {
-  type = string
+  type    = string
   default = "calculator"
 }

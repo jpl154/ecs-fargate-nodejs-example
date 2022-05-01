@@ -28,15 +28,15 @@ module "quickstart_vpc" {
 
 ## Create Fargate ECS Cluster
 module "fargate" {
-  depends_on  = [module.quickstart_vpc]
-  source      = "./modules/fargate"
-  region      = var.region
-  ServiceName = var.app_name
-  ContainerPort = var.container_port
-  ContainerCpu = var.container_cpu
+  depends_on      = [module.quickstart_vpc]
+  source          = "./modules/fargate"
+  region          = var.region
+  ServiceName     = var.app_name
+  ContainerPort   = var.container_port
+  ContainerCpu    = var.container_cpu
   ContainerMemory = var.container_mem
-  ImageUrl = var.image
-  name        = random_pet.name.id
-  owner       = var.owner
-  environment = var.environment
+  ImageUrl        = var.image
+  name            = random_pet.name.id
+  owner           = var.owner
+  environment     = var.environment
 }
